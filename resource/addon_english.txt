@@ -1,0 +1,22 @@
+"lang"
+{
+	"Language"		"English"
+	"Tokens"
+	{		
+		"addon_game_name"			"Dota2 but you Saitama"
+
+	     "DOTA_Tooltip_ability_antimage_keck"	"Got Punch Strength"
+	      "DOTA_Tooltip_ability_antimage_keck_description"	"Saitama hit your Enemy"
+	      "DOTA_Tooltip_ability_tusk_modifier_lox"	"Kick"
+	      "DOTA_Tooltip_ability_tusk_modifier_lox_description"	" Just kick your Enemy"
+	       "DOTA_Tooltip_ability_tusk_damage" "Bonus Damage"
+	       "DOTA_Tooltip_ability_tusk_damage_damage_bonus" "BONUS DAMAGE:"
+	        "DOTA_Tooltip_ability_tusk_shut_up" "SHUT UP!"
+	      "DOTA_Tooltip_ability_tusk_shut_up_description"	"Saitama, not love when many says and he is Scream."
+	      "DOTA_Tooltip_modifier_shut_up_idiot"		"SILENCE!!"
+	      "DOTA_Tooltip_ability_flying"	"Effect Fly"
+	      "DOTA_Tooltip_modifier_fly"	"Effect"
+	      "npc_dota_hero_tusk" "Saitama"
+	         
+	}
+}

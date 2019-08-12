@@ -1,0 +1,985 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"DOTA_Tooltip_ability_item",
+				"DOTA_Tooltip_ability_item_blade_permafrost_upgraded"
+			],
+			[
+				"aura_dama",
+				"aura_damage_per_second"
+			],
+			[
+				"Effec",
+				"EffectAttachType"
+			],
+			[
+				"dama",
+				"damade_interval"
+			],
+			[
+				"DOTA_Tooltip_ability_item_blade",
+				"DOTA_Tooltip_ability_item_blade_permafrost_upgraded"
+			],
+			[
+				"ITEM",
+				"ITEM_NOT_SHAREABLE"
+			],
+			[
+				"item_blade",
+				"item_blade_permafrost_upgraded"
+			],
+			[
+				"ItemRe",
+				"ItemRecipe"
+			],
+			[
+				"item_recip",
+				"item_recipe"
+			],
+			[
+				"item_recipe",
+				"item_recipe_blade_permafrost_upgraded"
+			],
+			[
+				"Ability",
+				"AbilityDamage"
+			],
+			[
+				"SetHeroMini",
+				"SetHeroMinimapIconScale"
+			],
+			[
+				"bonus",
+				"bonus_strong"
+			],
+			[
+				"bonus_",
+				"bonus_damage"
+			],
+			[
+				"ДОПОЛ",
+				"ДОПОЛНИТЕЛЬНОЙ"
+			],
+			[
+				"DOTA_Tooltip_ability",
+				"DOTA_Tooltip_ability_item_blade_permafrost"
+			],
+			[
+				"MODI",
+				"MODIFIER_STATE_VALUE_ENABLED"
+			],
+			[
+				"Item",
+				"ItemDeclarations"
+			],
+			[
+				"item_rec",
+				"item_recipe"
+			],
+			[
+				"DOTA_Tooltip_ability_item_s",
+				"DOTA_Tooltip_ability_item_super_clarity"
+			],
+			[
+				"T",
+				"TARGET"
+			],
+			[
+				"Fire",
+				"FireSound\taudible effect"
+			],
+			[
+				"MOD",
+				"MODIFIER_STATE_VALUE_ENABLED"
+			],
+			[
+				"SetMinimu",
+				"SetMinimumAttackSpeed"
+			],
+			[
+				"SetMaxi",
+				"SetMaximumAttackSpeed"
+			],
+			[
+				"OnPro",
+				"OnProjectileHitUnit\tTarget detect"
+			],
+			[
+				"DOTA_Toolti",
+				"DOTA_Tooltip_ability_item_shard_immortal"
+			],
+			[
+				"DOTA_Tool",
+				"DOTA_Tooltip_ability_item_shard_immortal"
+			],
+			[
+				"OnSpe",
+				"OnSpellStart\tFinished Cast Point"
+			],
+			[
+				"modif",
+				"modifier_\tAdd one modifier"
+			],
+			[
+				"clear",
+				"clearattack_radius"
+			],
+			[
+				"OnAttack",
+				"OnAttackLanded\tHit"
+			],
+			[
+				"OnToggle",
+				"OnToggleOn\tBEHAVIOR_TOGGLE"
+			],
+			[
+				"OnTo",
+				"OnToggleOff\tBEHAVIOR_TOGGLE"
+			],
+			[
+				"OnAbilit",
+				"OnAbilityExecuted\tmodifier event"
+			],
+			[
+				"Spend",
+				"SpendCharge\titem modf owner event"
+			],
+			[
+				"item_p",
+				"item_phase_boots_datadriven"
+			],
+			[
+				"item_",
+				"item_phase_boots_upgrade"
+			],
+			[
+				"ДОПОЛН",
+				"ДОПОЛЬНИТЕЛЬНАЯ"
+			],
+			[
+				"DOTA_Tooltip_Abi",
+				"DOTA_Tooltip_ability_tusk_damage"
+			],
+			[
+				"DOTA_Tooltip_a",
+				"DOTA_Tooltip_ability_tusk_damage"
+			],
+			[
+				"par",
+				"particle\tinside precache resource"
+			],
+			[
+				"MODIFIER_PROPERTY_PREA",
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"
+			],
+			[
+				"mod",
+				"modifier_\tAdd one modifier"
+			],
+			[
+				"modifier_dama",
+				"modifier_damage"
+			],
+			[
+				"DOTA_ABILITY_BEH",
+				"DOTA_ABILITY_BEHAVIOR_POINT"
+			],
+			[
+				"OnAbl",
+				"OnAbilityPhaseStart\tPre CastPoint"
+			],
+			[
+				"Abil",
+				"AbilityBehavior\tTeam Type"
+			],
+			[
+				"GetFo",
+				"GetForwardVector"
+			],
+			[
+				"Force",
+				"ForceKill\tKill this unit immediately."
+			],
+			[
+				"Abili",
+				"AbilitySpecial\tVariables"
+			],
+			[
+				"GetCA",
+				"GetCastRange\tNo Description Set"
+			],
+			[
+				"GetCast",
+				"GetCastRange\tNo Description Set"
+			],
+			[
+				"GetCastRang",
+				"GetCastRange"
+			],
+			[
+				"HasSc",
+				"HasScepter"
+			],
+			[
+				"GetLevel",
+				"GetMaxLevel"
+			],
+			[
+				"SetCustomHer",
+				"SetCustomHeroMaxLevel"
+			],
+			[
+				"SetUse",
+				"SetUseCustomHeroLevels\tTurn on custom-defined XP values for hero level ups. The ''table'' should be defined before switching this on."
+			],
+			[
+				"AbilityCas",
+				"AbilityCastPoint"
+			],
+			[
+				"DOTA_Too",
+				"DOTA_Tooltip_ability_tusk_armor_damage"
+			],
+			[
+				"DOTA_TO",
+				"DOTA_Tooltip_ability_tusk_armor_damage"
+			],
+			[
+				"DOTA",
+				"DOTA_Tooltip_ability_tusk_armor_damage"
+			],
+			[
+				"DOTA_UNIT_",
+				"DOTA_UNIT_TARGET_BASIC"
+			],
+			[
+				"AbilityDam",
+				"AbilityDamage"
+			],
+			[
+				"DOTA_ABILI",
+				"DOTA_ABILITY_BEHAVIOR_POINT"
+			],
+			[
+				"Act",
+				"ActOnTargets\tShared Target scope"
+			],
+			[
+				"Ac",
+				"ActOnTargets\tShared Target scope"
+			],
+			[
+				"OnP",
+				"OnProjectileHitUnit\tTarget detect"
+			],
+			[
+				"Li",
+				"LinearProjectile\tCreate LinearProjectile"
+			],
+			[
+				"MODIFIER_PROP",
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"
+			],
+			[
+				"FI",
+				"FIELD_INTEGER"
+			],
+			[
+				"FIE",
+				"FIELD_INTEGER"
+			],
+			[
+				"Apl",
+				"ApplyMotionController\tMovement"
+			],
+			[
+				"CAST",
+				"CASTER"
+			],
+			[
+				"AbilityDama",
+				"AbilityDamageType"
+			],
+			[
+				"modifier_sti",
+				"modifier_strike_death_crit"
+			],
+			[
+				"OnAttac",
+				"OnAttackLanded\tHit"
+			],
+			[
+				"modifier_stri",
+				"modifier_strike_death_crit"
+			],
+			[
+				"modifier_str",
+				"modifier_strike_death_crit"
+			],
+			[
+				"Abi",
+				"AbilitySpecial\tVariables"
+			],
+			[
+				"OnAtta",
+				"OnAttackLanded\tHit"
+			],
+			[
+				"AbilityUnit",
+				"AbilityUnitDamageType"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"GetModifier",
+				"GetModifierNameByIndex\tGet a modifier name by index."
+			],
+			[
+				"fun",
+				"function\tfunction"
+			],
+			[
+				"SetSpe",
+				"SetMaxSpeed\t( flMaxSpeed ) - sets unit's max speed"
+			],
+			[
+				"SetModel",
+				"SetModelScale"
+			],
+			[
+				"Con",
+				"ControlPoints\tCP1 CP2"
+			],
+			[
+				"DOTA_UNIT_TARGET",
+				"DOTA_UNIT_TARGET_HERO"
+			],
+			[
+				"AbilitiUnit",
+				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+			],
+			[
+				"part",
+				"particles"
+			],
+			[
+				"Conto",
+				"ControlPointEntities\tAttachment"
+			],
+			[
+				"Max",
+				"MaxPlayers"
+			],
+			[
+				"D",
+				"DOTA_Tooltip_ability_tusk_modifier_lox"
+			],
+			[
+				"modifier_damage",
+				"modifier_damage_second"
+			],
+			[
+				"SetFount",
+				"SetFountainConstantManaRegen"
+			],
+			[
+				"SetFountain",
+				"SetFountainPercentageManaRegen"
+			],
+			[
+				"SetPReg",
+				"SetPreGameTime"
+			],
+			[
+				"SetSan",
+				"SetSameHeroSelectionEnabled"
+			],
+			[
+				"SetPre",
+				"SetPreGameTime"
+			],
+			[
+				"vsn",
+				"vsndevts"
+			],
+			[
+				"Eff",
+				"EffectAttachType"
+			],
+			[
+				"Effe",
+				"EffectName"
+			],
+			[
+				"App",
+				"ApplyDamage"
+			],
+			[
+				"DOT",
+				"DOTA_UNIT_TARGET_TEAM_BOTH"
+			],
+			[
+				"Of",
+				"OnToggleOff\tBEHAVIOR_TOGGLE"
+			],
+			[
+				"OnAt",
+				"OnTakeDamage\tmodf owner took dmg"
+			],
+			[
+				"Abilit",
+				"AbilityBehavior\tTeam Type"
+			],
+			[
+				"SetHealth",
+				"SetFountainPercentageHealthRegen"
+			],
+			[
+				"SetItem",
+				"SetRecommendedItemsDisabled"
+			],
+			[
+				"SetHud",
+				"SetUseUniversalShopMode"
+			],
+			[
+				"DOTAT",
+				"DOTA_TEAM_BADGUYS"
+			],
+			[
+				"margin",
+				"margin-bottom\tproperty"
+			],
+			[
+				"d",
+				"double\tborder-style"
+			],
+			[
+				"marg",
+				"margin\tproperty"
+			],
+			[
+				"border-",
+				"border-style\tproperty"
+			],
+			[
+				"e",
+				"inset\tborder"
+			],
+			[
+				"bacg",
+				"background\tproperty"
+			],
+			[
+				"background",
+				"background-clip\tproperty"
+			],
+			[
+				"backgrou",
+				"background-color\tproperty"
+			],
+			[
+				"tr",
+				"transition-duration\tproperty"
+			],
+			[
+				"backgro",
+				"background-image\tproperty"
+			],
+			[
+				"b",
+				"button\tTag"
+			],
+			[
+				"margi",
+				"margin-top\tproperty"
+			],
+			[
+				"transi",
+				"transition-duration\tproperty"
+			],
+			[
+				"in",
+				"inline-block\tdisplay"
+			],
+			[
+				"SetUseMax",
+				"SetCustomHeroMaxLevel"
+			],
+			[
+				"GetRu",
+				"GetUseCustomHeroLevels"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "npc_abilities_custom.txt",
+			"settings":
+			{
+				"buffer_size": 17956,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "npc_items_custom.txt",
+			"settings":
+			{
+				"buffer_size": 21943,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "npc_heroes_custom.txt",
+			"settings":
+			{
+				"buffer_size": 657,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Nut",
+				"Set Syntax: Lua"
+			],
+			[
+				"Lua",
+				"Set Syntax: Lua"
+			],
+			[
+				"Package Control: Lua",
+				"Package Control: List Unmanaged Packages"
+			],
+			[
+				"Package Control: DOta",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"Package Control: In",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 414.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/МИША 012/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/МИША 012/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/scripts/vscripts/heroes/hero_tusk/fury_swipes.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/new_bloom_2017/scripts/npc/npc_abilities_custom.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/scripts/npc/npc_abilities_override.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/scripts/npc/npc_units_custom.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota/scripts/npc/npc_units.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/scripts/vscripts/addon_game_mode.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/holdout_example/scripts/shops/holdout_example_shops.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/frostivus_2017/scripts/shops.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/scripts/vscripts/heroes/hero_tusk/plustrength.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/scripts/vscripts/libraries/modifiers/modifier_movespeed_cap.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/lua_ability_example/scripts/vscripts/furion_teleportation_lua.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/lua_ability_example/scripts/vscripts/modifier_sven_great_cleave_lua.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/lua_ability_example/scripts/npc/npc_abilities_custom.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/lua_ability_example/scripts/vscripts/sven_great_cleave_lua.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/scripts/vscripts/heroes/hero_tusk/getcastrange.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/scripts/vscripts/heroes/hero_tusk/summon_wolves.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/scripts/vscripts/heroes/hero_tusk/teleportation.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/scripts/vscripts/test_ability.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/lua_ability_example/scripts/vscripts/furion_force_of_nature_lua.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/scripts/vscripts/heroes/hero_tusk/movespeedlimit.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/scripts/vscripts/heroes/hero_mirana/Jump.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/barebones/scripts/vscripts/settings.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/barebones/scripts/vscripts/addon_game_mode.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/scripts/vscripts/setting.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/scripts/vscripts/gamemode.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/scripts/custom_events.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/barebones/scripts/vscripts/internal/util.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/barebones/scripts/vscripts/gamemode.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/barebones/scripts/vscripts/events.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/resource/addon_russian.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/barebones/scripts/npc/npc_items_custom.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/barebones/scripts/npc/npc_abilities_override.txt",
+		"/C/Users/МИША 012/AppData/Local/Temp/Rar$DIa1992.22550/readme.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/addoninfo.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/barebones/scripts/vscripts/internal/gamemode.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/scripts/npc/herolist.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/nnn/scripts/vscripts/addon_game_mode.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/overthrow/scripts/vscripts/addon_game_mode.lua",
+		"/D/GTA San Andreas/[cleo]-2575-teleport-k-markeru/readme-ru.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/scripts/npc/npc_heroes_custom.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/scripts/vscripts/lua_ability_trying.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/lua_ability_example/scripts/vscripts/modifier_sven_warcry_lua.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/frostivus_2017/scripts/vscripts/datadriven/antimage_blink.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/frostivus_2017/scripts/npc/npc_abilities_custom.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/frostivus_2017/scripts/vscripts/heroes/axe_berserkers_call_lua.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/frostivus_2017/scripts/vscripts/minigames/crystal_maiden_game.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/holdout_example/scripts/vscripts/ogre_magi.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/holdout_example/scripts/npc/npc_abilities_custom.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/barebones/scripts/vscripts/internal/events.lua",
+		"/C/Users/МИША 012/AppData/Local/Temp/Rar$DIa6316.34558/npc_abilities_custom.txt",
+		"/C/Users/МИША 012/AppData/Local/Temp/Rar$DIa8680.47850/npc_abilities_custom.txt",
+		"/C/Users/МИША 012/Downloads/Lol.lua",
+		"/C/Users/МИША 012/AppData/Local/Temp/Rar$DIa8680.41854/npc_abilities_custom.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/scripts/npc/npc_abilities_custom.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota/scripts/npc/npc_heroes.txt",
+		"/D/steam/steamapps/common/Counter-Strike Global Offensive/csgo/materials/allow1024.txt",
+		"/C/Users/МИША 012/AppData/Local/Temp/Rar$DIa7068.20600/Read Me.txt",
+		"/C/Users/МИША 012/AppData/Local/Temp/Rar$DIa7068.26058/Texture List.txt",
+		"/C/Users/МИША 012/Desktop/cyber_course_globals.nut",
+		"/D/steam/steamapps/common/Counter-Strike Global Offensive/csgo/bspconvar_whitelist.txt",
+		"/C/Steam/userdata/402967156/730/local/cfg/doubeljump.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dota2butyousaitama/resource/addon_english.txt",
+		"/C/Users/МИША 012/Desktop/html/body.html",
+		"/D/steam/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/scripts/vscripts/x100traps/x100_script_tm_lee_vb.nut",
+		"/D/steam/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/scripts/vscripts/x100traps/x100_script_tm_pho.nut",
+		"/D/steam/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/scripts/vscripts/x100traps/x100_script_tm_pir_vd.nut",
+		"/C/Users/МИША 012/Desktop/Новый текстовый документ.txt",
+		"/D/steam/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/scripts/vscripts/x100traps/x100_script_ctm_fbi.nut",
+		"/D/steam/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/vscripts/anime_vs_watermellow/scriptactivatorl.nut",
+		"/C/Users/МИША 012/Desktop/ss.lua",
+		"/D/steam/steamapps/common/Doki Doki Literature Club/traceback.txt",
+		"/D/steam/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/vscripts/anime_vs_watermellow/setmodel.nut",
+		"/C/Users/МИША 012/AppData/Local/Temp/Rar$DIa5336.22401/donate.css",
+		"/C/Users/МИША 012/AppData/Local/Temp/Rar$DIa5336.42520/donate.css",
+		"/C/Users/МИША 012/AppData/Local/Temp/Rar$DIa5336.41243/donate.xml",
+		"/C/Users/МИША 012/Desktop/scripts/vscripts/heroes/opezdal/devildusha.lua",
+		"/C/Users/МИША 012/Desktop/scripts/npc/npc_abilities_custom.txt",
+		"/C/Users/МИША 012/Desktop/scripts/npc/npc_heroes_custom.txt",
+		"/C/Users/МИША 012/AppData/Local/Temp/Rar$DIa5336.29607/donate.css",
+		"/C/Users/МИША 012/Desktop/html/NOVICHOK - Банлист.html",
+		"/C/Users/МИША 012/Desktop/30 CSS Hover Effects For Buttons Demo.html",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota/scripts/npc/npc_abilities.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/hero_demo/scripts/npc/npc_abilities_custom.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/content/dota_addons/ui_example/panorama/layout/custom_game/inventory.xml",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/overthrow/scripts/npc/npc_abilities_custom.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/barebones/scripts/custom_net_tables.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/barebones/scripts/attachments.txt",
+		"/C/Users/МИША 012/Desktop/body.html",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/overthrow/scripts/vscripts/addon_game_spawner.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/rpgfight/addoninfo.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/overthrow/scripts/npc/herolist.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/rpgfight/scripts/npc/npc_heroes_custom.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/rpgfight/resource/addon_russian.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/content/dota_addons/rpgfight/panorama/layout/custom_game/custom_ui_manifest.xml",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/overthrow/addoninfo.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/overthrow/scripts/custom_net_tables.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/overthrow/scripts/npc/npc_abilities_override.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/rpgfight/scripts/npc/npc_abilities_custom.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/content/dota_addons/rpgfight/panorama/layout/custom_game/join.xml",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/rpgfight/scripts/vscripts/setting.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/rpgfight/scripts/npc/herolist.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/rpgfight/scripts/vscripts/gamemode.lua",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/rpgfight/scripts/vscripts/addon_game_mode.lua",
+		"/C/Users/МИША 012/AppData/Local/Temp/Rar$DIa6116.25009/npc_abilities_custom.txt",
+		"/C/Users/МИША 012/AppData/Local/Temp/Rar$DIa4144.35882/donate.css",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/overthrow/resource/addon_russian.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/barebones/resource/addon_english.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/barebones/scripts/addon_hud_textures.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/rpgfight/scripts/npc/npc_units_custom.txt",
+		"/C/Users/МИША 012/Downloads/abilka.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/rpgfight/scripts/npc/npc_units.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/rpgfight/scripts/npc/npc_heroes_custom}.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/content/dota_addons/rpgfight/panorama/styles/custom_game/join.css",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/rpgfight/scripts/npc/npc_override_hero.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/dungeon/scripts/npc/npc_abilities_override.txt",
+		"/C/Users/МИША 012/Desktop/server/minecraft_server.1.12.2.jar",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/frostivus_2017/scripts/npc/npc_abilities_override.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/game/dota_addons/rpgfight/scripts/npc/override_hero.txt",
+		"/C/Users/МИША 012/AppData/Local/Temp/Rar$DIa1416.43290/npc_abilities_custom.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/content/dota_addons/rpgfight/panorama/layout/custom_game/custom_loading_screen.xml",
+		"/C/Steam/steamapps/common/dota 2 beta/content/dota_addons/rpgfight/panorama/styles/custom_game/custom_loading_screen.css",
+		"/C/Users/МИША 012/Downloads/npc_abilities_custom.txt",
+		"/C/Steam/steamapps/common/dota 2 beta/content/dota_addons/rpg_example/panorama/layout/custom_game/hud_main.xml",
+		"/C/Users/МИША 012/AppData/Local/Temp/Rar$DIa6844.16940/custom_loading_screen.xml",
+		"/C/Users/МИША 012/AppData/Local/Temp/Rar$DIa6844.17090/custom_ui_manifest.xml",
+		"/C/Steam/steamapps/common/dota 2 beta/content/dota_addons/rpgfight/panorama/layout/custom_game/Panel_custom_ui_manifest.xml"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 619.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"npc_items_custom.txt",
+			"npc_items_custom"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "npc_abilities_custom.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17956,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								54,
+								55
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Dota KV/dotaKV.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "npc_items_custom.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21943,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Dota KV/dotaKV.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "npc_heroes_custom.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 657,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Dota KV/dotaKV.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "npc_abilities_custom.sublime-project",
+	"replace":
+	{
+		"height": 114.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Steam\\steamapps\\common\\dota 2 beta\\game\\dota_addons\\dota2butyousaitama\\scripts\\npc\\npc_abilities_custom.txt"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

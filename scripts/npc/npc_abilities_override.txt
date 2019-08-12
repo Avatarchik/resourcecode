@@ -1,0 +1,5 @@
+"DOTAAbilities"
+{
+	"item_phase_boots"      "REMOVE"
+	"item_recipe_phase_boots"     "REMOVE"
+}

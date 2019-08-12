@@ -1,0 +1,40 @@
+"DOTAHeroes"	
+{
+	"Version" "1"	
+	
+	"npc_dota_hero_tusk"
+	{
+		"override_hero" "npc_dota_hero_tusk"
+		"Ability1" "tusk_strike_death"
+		"Ability2" "tusk_modifier_lox"
+		"Ability3" "tusk_armor"
+		"Ability4" "tusk_debuff_vodka"
+		"Ability5" "tusk_super_speed"
+		"Ability6" "tusk_damage"
+		"Ability7" "tusk_flying"
+		"Ability10"	"special_bonus_unique_tusk_1"
+
+		
+		"Model"	"models/units/saitama/saitama.vmdl"
+		"MovementSpeed" "350"
+		"DisableWearables" "1"
+		"ModelScale"	"1"
+		
+		"BaseAttackSpeed" "150"
+		
+		"StatusHealth" "800"
+		
+		"ArmorPhysical" "0"
+		
+		"AttributeBaseStrength" "1"
+		
+		"AttributeStrengthGain"	"2"
+		
+		"StatusMana" "200"
+		"StatusManaRegen" "0"
+		"RingRadius" "35"
+		
+		"AttackDamageMin" "45"
+		"AttackDamageMax" "55"
+	}
+}		
