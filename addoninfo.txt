@@ -1,0 +1,12 @@
+"AddonInfo"
+{
+    maps            "dota dota_old"
+    "IsPlayable"    "1"
+    "HeroGuidesSupported" "1"
+    "PenaltiesEnabled"          "0"
+    "dota"
+    {
+        "MaxPlayers"    "10"
+    }
+}
+
