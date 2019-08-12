@@ -1,0 +1,34 @@
+ <root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/custom_loading_screen.css" />
+		<include src="file://{resources}/styles/dotastyles.css" />
+	</styles>
+	<Panel class="AddonLoadingRoot">
+		<Panel id="CustomBg" >
+			<Image src="file://{images}/custom_game/loading_screen/custom_bg.png" scaling="stretch-to-fit-preserve-aspect" />
+		</Panel>
+		<Panel id="TitlePanel">
+			<Label id="AddonTitle" text="Saitama" style="" />
+		</Panel>
+		<Panel class="buttpanel">
+			<Label id="WhatHere" text="Что здесь?" />
+			<Label id="LabelText" text="Это игра, и вы играете за сайтаму здесь набор способностей похож у сайтамы и с новымы предметами!" />
+		</Panel>
+		<Panel>
+			<Image id="item1" src="file://{images}/custom_game/items/bladepermafrost.png" />
+			<Image id="item2" src="file://{images}/custom_game/items/claritysuper.png" />
+			<Image id="item3" src="file://{images}/custom_game/items/shardimmortality.png" />
+      <Image id="item4" src="file://{images}/custom_game/items/bladepermafrost_upgraded.png" />
+      <Image id="item5" src="file://{images}/custom_game/items/dagon6.png" />
+      <Image id="item6" src="file://{images}/custom_game/items/hand_midas_2.png" />
+      <Image id="item7" src="file://{images}/custom_game/items/superflask.png" />
+      <Image id="item8" src="file://{images}/custom_game/items/bookstateagillity.png" />
+      <Image id="item9" src="file://{images}/custom_game/items/bookstateintellect.png" />
+      <Image id="item10" src="file://{images}/custom_game/items/bookstatestrength.png" />
+		</Panel>
+    <Panel>
+      <Label id="warning" text="{----" />
+    </Panel>
+	</Panel>
+</root>
+<!-- LOAD SCREEN  -->

@@ -1,0 +1,119 @@
+.AddonLoadingRoot
+{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+#TitlePanel
+{
+  horizontal-align: left;
+  vertical-align: bottom;
+  margin-bottom: 150px;
+  margin-left: 100px;
+  flow-children: right;
+}
+#AddonTitle
+{
+  margin-bottom: -15px;
+	vertical-align: center;
+	text-transform: uppercase;
+	font-size: 80px;
+	color: #cccccc;
+	text-shadow: 2px 2px 2px #000000;
+}
+.ProBg
+{
+  background-repeat: repeat;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+}
+.buttpanel
+{
+  background-color: black;
+  width: 25%;
+  height: 50%;
+  margin-top: 300px;
+  opacity: 0.8;
+  border: 2px solid gray;
+  border-width: 10px;
+
+}
+#LabelText
+{
+  margin-top: 15%;
+  margin-left: 5%;
+}
+#WhatHere
+{
+  margin-left: 35%;
+  font-size: 30px;
+}
+#item1
+{
+  margin-top: 47%;
+  margin-left: -30px;
+  padding: 88px 64px;
+
+}
+#item2
+{
+  margin-top: 47%;
+  margin-left: 14%;
+  padding: 88px 64px;
+}
+#item3
+{
+  margin-top: 47%;
+  margin-left: 30.47%;
+  padding: 88px 64px;
+
+}
+#item4
+{
+  margin-top: 55%;
+  margin-left: 111px;
+  padding: 88px 64px;
+}
+#item5
+{
+  margin-top: 55%;
+  margin-left: -30px;
+  padding: 88px 64px;
+}
+#item6
+{
+  margin-top: 55%;
+  margin-left: 30.47%;
+  padding: 88px 64px;
+}
+#item7
+{
+  margin-top: 63%;
+  margin-left: 111px;
+  padding: 88px 64px;
+}
+#item8
+{
+  margin-top: 63%;
+  margin-left: 30.47%;
+  padding: 88px 64px;
+}
+#item9
+{
+  margin-top: 63%;
+  margin-left: -30px;
+  padding: 88px 64px;
+}
+#item10
+{
+  margin-top: 39%;
+  margin-left: 14%;
+  padding: 88px 64px;
+}
+#warning
+{
+  font-size: 100px;
+  margin-top: 500px;
+  margin-left: 500px;
+  color: red;
+}
