@@ -1,3 +1,9 @@
+--[[
+Author: DDSuper
+Item: Dagon6
+Data: 09.12.2019
+--]]
+
 function item_dagon6_on_spell(keys)
 	local dagon_level = keys.ability:GetLevel()
 	
