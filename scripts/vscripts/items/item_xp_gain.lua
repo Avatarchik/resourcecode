@@ -1,3 +1,10 @@
+--[[
+Author: DDSuper
+Item: Xp Talisman
+Data: 11.03.2019
+Version: 7.23h
+--]]
+
 function Xp_gain(keys)
 	local target = keys.target
 	local caster = keys.caster
