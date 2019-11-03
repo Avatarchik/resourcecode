@@ -14,7 +14,8 @@
 		"item"		"item_book_state_strength"
 		"item"		"item_book_state_agillity"
 		"item"		"item_book_state_intellect"
-		"item"		"item_spawn_unit"
+		"item"		"item_xp_gain"
+
 	}
 
 	"attributes"
@@ -31,6 +32,7 @@
 		"item"		"item_blade_of_alacrity"
 		"item"		"item_staff_of_wizardry"
 		"item"		"item_ultimate_orb"
+		"item"		"item_invis_support"
 	}
 
 	"weapons_armor"
@@ -58,12 +60,14 @@
 		"item"		"item_gloves"
 		"item"		"item_cloak"
 		"item"		"item_gem"
+		"item"		"item_gem_datadriven"
 		"item"		"item_ghost_scepter_upgrade"
 		"item"		"item_lifesteal"
 		"item"		"item_ghost"
 		"item"		"item_talisman_of_evasion"
 		"item"		"item_blink"		
 		"item"		"item_shadow_amulet"
+		"item"		"item_demon"
 	}	
 	
 	// Level 1 - Green Recipes
@@ -75,9 +79,6 @@
 		"item"		"item_bracer"
 		"item"		"item_poor_mans_shield"
 		"item"		"item_soul_ring"
-		"item"		"item_armlet_new"
-		"item"		"item_phase_boots_datadriven"
-		"item"		"item_phase_boots_upgraded"
 		"item"		"item_power_treads"
 		"item"		"item_oblivion_staff"
 		"item"		"item_pers"
@@ -100,6 +101,8 @@
 		"item"		"item_vladmir"
 		"item"		"item_mekansm"
 		"item"		"item_pipe"
+		"item"		"item_iron_talon"
+		"item"		"item_rune_breaker"
 	}
 	
 	"magics"
@@ -112,9 +115,10 @@
 		"item"		"item_rod_of_atos"
 		"item"		"item_ultimate_scepter"
 		"item"		"item_orchid"
+		"item"		"item_stop_time"
+		"item"		"item_demon_paper"
 		"item"		"item_refresher"
 		"item"		"item_sheepstick"
-		"item"		"item_dagon_gold"
 		"item"		"item_slippers_of_halcyon"
 	}
 	
