@@ -5,91 +5,27 @@
 
 /// Custom Abilities
 ///--------------------------------------------------------
-	"antimage_keck"
-	{
-		"BaseClass"	"ability_datadriven"
-		"AbilityTextureName" "hammer"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO"
-		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitDamageType"	"DAMAGE_TYPE_PHYSICAL"
-		"MaxLevel"	"1"
-		"RequiredLevel" "6"
-		"AbilityCastRange"	"150"
-		"AbilityCastPoint" "0.30"
-		"AbilityCooldown"	"80"
-		"AbilityDamage" "500"
-		"AbilitySpecial"
-		{
-			"1"
-			{
-				"var_type"	"FIELD_INTEGER"
-				"damage"	"500"
-			}
-			"2"
-			{
-				"var_type"	"FIELD_INTEGER"
-				"speed_kick"	"1"
-			}
-			"3"
-			{
-				"var_type"	"FIELD_INTEGER"
-				"distance_kick"	"0"
-			}
-		}
-		"OnSpellStart"
-		{
-			"Damage"
-			{
-				"Target"	"TARGET"
-				"Type"	"DAMAGE_TYPE_PHYSICAL"
-				"Damage"	"%damage"
-			}
-			"ApplyModifier"
-			{
-				"Target"	"TARGET"
-				"ModifierName"	"modifier_air_mage"
-			}
-			"Blink"
-			{
-				"Target" 		"TARGET"
-			}
-		}
-		"Modifiers"
-		{
-			"modifier_air_mage"
-			{
-				"IsDebuff"	"1"
-				"Duration" "%speed_kick"
-				"States"
-				{
-					"MODIFIER_STATE_INVULNERABLE"	"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_UNSELECTABLE"	"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_NO_HEALTH_BAR"	"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_INVISIBLE"	"MODIFIER_STATE_VALUE_ENABLED"
-				}
-			}
-		}
-	}
 		"tusk_modifier_lox"
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"Warlusloss"
-		"MaxLevel" 						"1"
+		"MaxLevel" 						"4"
 		"IsOnCastBar"	"1"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"AbilityDamageType"				"DAMAGE_TYPE_PHYSICAL"
+		"AbilityDamageType"				"DAMAGE_TYPE_PURE"
 
-
-    	"AbilityCooldown"				"64"
-   	 	"AbilityCastRange"				"150"
-   	 	"AbilityManaCost"				"200"
    	 	"AbilityCastPoint"				"0.2"
-    	"AbilityDamage" 				"200"
+    	"AbilityDamage" 				"80 120 150 190"
     	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+    	"AbilityCooldown"	"8 6 3 1"
+
+    	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
 
     	"precache"
     	{
@@ -103,7 +39,7 @@
     		"1"
     		{
     			"var_type"		"FIELD_INTEGER"
-    			"duration"		"5"
+    			"duration"		"2"
     		}
     		"2"
     		{
@@ -113,51 +49,33 @@
     		"3"
     		{
     			"var_type" "FIELD_INTEGER"
-    			"distancepiz" "880"
-    			"LinkedSpecialBonus"	"special_bonus_unique_tusk_1"
+    			"distancepiz" "880 980 1180 1380"
     		}
     		"4"
     		{
     			"var_type"	"FIELD_INTEGER"
-    			"damage" "200"
+    			"damage" "80 120 150 190"
     		}
     		"5"
     		{
     			"var_type"	"FIELD_INTEGER"
-    			"loss_health"	"30"
+    			"loss_health"	"30 60 80 100"
     		}
     		"6"
     		{
     			"var_type"	"FIELD_INTEGER"
-    			"duration_loss_hp"	"3"
+    			"duration_loss_hp"	"2 3 4 5"
     		}
-
-    	}
-    	"OnSpellStart"
-    	{
-    		"Damage"
+    		"07"
     		{
-    			"Target"		"TARGET"
-    			"Type"			"DAMAGE_TYPE_PHYSICAL"
-    			"Damage"		"%damage"
+    			"var_type"	"FIELD_INTEGER"
+    			"cooldown_kick"	"8 6 3 1"
     		}
-    		"Knockback"
+    		"08"
     		{
-    			"Target"            "TARGET"
-    			"Center" 	        "CASTER"
-    			"Distance"	        "%distancepiz"
-    			"Duration"	        "%piar"
-    			"Height"	        "450"
-    			"IsFixedDistance"	"1"
-    			"ShouldStun"        "0"
-
+    			"var_type"	"FIELD_INTEGER"
+    			"removecooldown"	"0"
     		}
-
-        	"ApplyModifier"
-        	{
-        		"ModifierName"	"modifier_tusk_saitama"
-        		"Target" 		"TARGET"
-        	}
 
     	}
     	"Modifiers"
@@ -165,33 +83,21 @@
     		"modifier_tusk_saitama"
     		{
     			"IsDebuff"			"1"
-    			"Duration" "%piar"
+    			"Passive"	"0"
+    			"Duration"	"0.5"
 
     			"EffectName"	"particles/units/heroes/hero_bloodseeker/bloodseeker_rupture.vpcf"
     			"EffectAttachType"	"follow_origin"
     			"Target"	"TARGET"
-    			"OnCreated"
-    			{
-    				"ApplyModifier"
-    				{
-    					"ModifierName"	"modifier_damage_second"
-    					"Target" 		"TARGET"
-    				}
-    				"FireSound"
-        			{
-        				"EffectName"	"Hero_Tusk.WalrusKick.Target"
-        			}
-        			"Rotate"
-					{
-   						"Target"       "TARGET"
-   						"PitchYawRoll"  "0x 30y 0z" //x y z values
-					}
 
+
+    			"States"
+    			{
+    				"MODIFIER_STATE_STUNNED"		"MODIFIER_STATE_VALUE_ENABLED"
     			}
     			"Properties"
     			{
-    				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "-30000000"
-    				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"10000"
+    				"MODIFIER_PROPERTY_ABSORB_SPELL"	"1"
     			}
     		}
     	}
@@ -211,192 +117,65 @@
 					"Damage"
 					{
 						"Target"		"TARGET"
-						"Type"			"DAMAGE_TYPE_PHYSICAL"
+						"Type"			"DAMAGE_TYPE_PURE"
 						"Damage"		"%loss_health"
 					}
 				}
 			}
-		}
-	}
-
-
-	"tusk_damage"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityTextureName"			"troll_warlord_battle_trance"
-		"RequiredLevel"		"5 10 18 25 35"
-		"AbilityManaCost"	"200 210 230 240 260"
-		"MaxLevel" 						"5"
-		"AbilityCooldown"	"50"
-
-		"precache"
-		{
-			"particle"  "particles/units/heroes/hero_troll_warlord/troll_warlord_battletrance_buff.vpcf"
-			"soundfile" "soundevents/game_sounds_heroes/game_sounds_troll_warlord.vsndevts"
-			"particle"	"particles/units/heroes/hero_axe/axe_beserkers_call_owner.vpcf"
-		}
-
-		"AbilitySpecial"
-		{
-			"1"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"damage_bonus"			"5 15 25 37 53"
-			}
-			"2"
-			{
-				"var_type"	"FIELD_INTEGER"
-				"bonus_attack_speed"	"23 53 80 110 150"
-			}
-			"3"
-			{
-				"var_type"	"FIELD_INTEGER"
-				"used_damage_bonus"	"50 100 130 149 170 220"
-			}
-			"4"
-			{
-				"var_type"	"FIELD_INTEGER"
-				"used_attack_speed" "80 180 230 300 380"
-			}
-			"5"
-			{
-				"var_type"	"FIELD_INTEGER"
-				"clearattack_damage"	"50 60 70 80 99"
-			}
-			"6"
-			{
-				"var_type"	"FIELD_INTEGER"
-				"clearattack_radius"	"450"
-			}
-		}
-		"OnSpellStart"
-		{
-			"ApplyModifier"
-			{
-				"ModifierName"	"modifier_bonus_damage"
-				"Target" 		"CASTER"
-			}
-		}
-		"Modifiers"
-		{
-			"modifier_damage"
+			"modifier_apply_other_modifiers"
 			{
 				"Passive"			"1"
-				"IsHidden"	"1"
-				"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
-
-				"EffectName"	"particles/units/heroes/hero_troll_warlord/troll_warlord_battletrance_buff.vpcf"
-				"EffectAttachType"	"follow_origin"
-				"OnCreated"
-				{
-					"FireSound"
-					{
-						"EffectName"	"Hero_TrollWarlord.BattleTrance.Cast"
-						"Target" 		"CASTER"
-					}
-
-				}
+				"IsHidden"			"1"
+				"IsDebuff"			"0"
+				
 				"OnAttackLanded"
 				{
-					"CleaveAttack"
-                	{
-                		"CleavePercent"         "%clearattack_damage"
-                		"CleaveRadius"          "%clearattack_radius"
-                		"CleaveEffect"          "particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf"
-                	}
-				}
-
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%damage_bonus"
-					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attack_speed"
-				}
-			}
-			"modifier_bonus_damage"
-			{
-				"IsHidden"	"1"
-				"Duration"	"5"
-				"OnDestroy"
-				{
-					"RemoveModifier"
+					"Random"
 					{
-						"ModifierName"	"modifier_bonus_damage"
-						"Target" 		"CASTER"
+						"Chance"			"5"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_tusk_saitama"
+								"Target" 		"TARGET"
+							}
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_damage_second"
+								"Target" 		"TARGET"
+							}
+							"RunScript"
+							{
+								"ScriptFile"	"heroes/hero_tusk/kill_unit"
+								"Function"		"CooldownKick"
+								"WaitPlease"	"%cooldown_kick"
+								"ScepterNoWait"	"%removecooldown"
+							}
+							"Knockback"
+							{
+								"Target"            "TARGET"
+								"Center" 	        "CASTER"
+								"Distance"	        "500"
+								"Duration"	        "0.5"
+								"Height"	        "10"
+								"IsFixedDistance"	"0"
+								"ShouldStun"        "0"	
+							}
+							"Damage"
+							{
+								"Target"		"TARGET"
+								"Type"			"DAMAGE_TYPE_PURE"
+								"Damage"		"%damage"
+							}
+							"FireSound"
+							{
+								"EffectName"	"Hero_TrollWarlord.BattleTrance.Cast"
+								"Target" 		"CASTER"
+							}
+						}
 					}
 				}
-				"OnCreated"
-				{
-					"ApplyModifier"
-					{
-						"ModifierName"	"modifier_used_clearstack"
-						"Target" 		"CASTER"
-					}
-				}
-				"EffectName"		"particles/units/heroes/hero_axe/axe_beserkers_call_owner.vpcf"
-				"EffectAttachType"	"follow_origin"
-				"Target"	"CASTER"
-				"StatusEffectName" 		"particles/status_fx/status_effect_beserkers_call.vpcf"
-				"StatusEffectPriority"  "10"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%used_attack_speed"
-				    "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%used_damage_bonus"
-
-				}
-			}
-			"modifier_used_clearstack"
-			{
-				"Passive"			"0"
-				"Duration"	"5"
-
-				"OnAttackLanded"
-				{
-					"CleaveAttack"
-					{
-						"CleavePercent"         "100"
-						"CleaveRadius"          "1100"
-						"CleaveEffect"          "particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf"
-					}
-				}
-			}
-		}
-	}
-	"tusk_shut_up"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"death_prophet_silence"
-		"MaxLevel" 						"1"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
-		"AbilityCastRange"				"500"
-		"AbilityCastPoint" 				"1"
-		"AbilityCooldown" 				"50"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-
-		"OnSpellStart"
-		{
-			"ApplyModifier"
-			{
-				"ModifierName"	"modifier_shut_up_idiot"
-				"Target" 		"TARGET"
-			}
-		}
-		"Modifiers"
-		{
-			"modifier_shut_up_idiot"
-			{
-				"IsDebuff"			"1"
-				"Duration"			"3"
-				"States"
-				{
-					"MODIFIER_STATE_NIGHTMARED"		"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_BLIND" 			"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_MUTED"			"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_DOMINATED"		"MODIFIER_STATE_VALUE_ENABLED"
-			    }
 			}
 		}
 	}
@@ -505,6 +284,7 @@
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "AbilityTextureName"            "onestrike"
         "MaxLevel"                         "1"
+        "AbilityCooldown" "40"
         "RequiredLevel"	"35"
        	"precache"
 		{
@@ -523,6 +303,11 @@
             	"var_type"	"FIELD_INTEGER"
             	"crit_strike"	"100000"
             }
+            "03"
+            {
+            	"var_type"	"FIELD_INTEGER"
+            	"cooldown"	"40"
+            }
         }
         "Modifiers"
         {
@@ -538,11 +323,12 @@
                         "PseudoRandom" "DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
                         "OnSuccess"
                         {
-                            "ApplyModifier"
-                            {
-                                "ModifierName"    "modifier_strike_death_crit"
-                                "Target"         "CASTER"
-                            }
+                           	"RunScript"
+                           	{
+                           		"ScriptFile"	"heroes/hero_tusk/kill_unit"
+                           		"Function"		"kill_chance"
+                           		"CooldownSpell"	"%cooldown"
+                           	}
                             "FireSound"
                 			{
                 				"EffectName"        "Hero_Axe.Culling_Blade_Success"
@@ -555,24 +341,6 @@
                 			}
                         }
                     }
-                }
-            }
-            "modifier_strike_death_crit"
-            {
-
-                "IsHidden"            "1"
-
-                "Properties"
-                {
-                   "MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"    "%crit_strike"
-                }
-                "OnAttackLanded"
-                {
-                	"RemoveModifier"
-                	{
-                		"ModifierName"	"modifier_strike_death_crit"
-                		"Target" 		"CASTER"
-                	}
                 }
             }
         }
@@ -673,7 +441,7 @@
     	"AbilityTextureName"			"Warlusloss"
     	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
-    	"MaxLevel" 						"1"
+    	"MaxLevel" 						"4"
     	"AbilityCooldown"	"200"
     	"AbilitySpecial"
     	{
@@ -681,6 +449,11 @@
     		{
     			"var_type"			"FIELD_FLOAT"
     			"duration"		"5.0"
+    		}
+    		"02"
+    		{
+    			"var_type"	"FIELD_INTEGER"
+    			"speed" "1000 3000 4000 5000"
     		}
     	}
     	"OnSpellStart"
@@ -703,320 +476,78 @@
 
     			"Properties"
     			{
-    				"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"	"10000"
-    				"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE_MIN"	"10000"
+    				"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"	"%speed"
+    				"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE_MIN"	"%speed"
     			}
     		}
     	}
     }
-    "special_bonus_unique_tusk_1"
-    {
-    	"BaseClass"             		"ability_datadriven"
-    	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-    	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    	"OnUpgrade"
-    	{
-    		"RemoveAbility"
-    		{
-    			"Target"	"CASTER"
-    			"AbilityName"	"tusk_modifier_lox"
-    		}
-    		"AddAbility"
-    		{
-    			"Target" 		"CASTER"
-    			"AbilityName"	"tusk_modifier_lox_upgraded"
-    		}
-    	}
-    }
-    "tusk_modifier_lox_upgraded"
+	"bounty_hunter_jinada_datadriven"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"Warlusloss"
-		"MaxLevel" 						"1"
-		"IsOnCastBar"	"1"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"AbilityDamageType"				"DAMAGE_TYPE_PHYSICAL"
+		"AbilityTextureName"			"bounty_hunter_jinada"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel" 						"4"
 
+		"AbilityCooldown"				"12 9 6 3"
 
-    	"AbilityCooldown"				"64"
-   	 	"AbilityCastRange"				"150"
-   	 	"AbilityManaCost"				"200"
-   	 	"AbilityCastPoint"				"0.2"
-    	"AbilityDamage" 				"200"
-    	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-
-    	"precache"
-    	{
-    		"particle" 		"particles/units/heroes/hero_bloodseeker/bloodseeker_rupture.vpcf"
-    		"soundfile"		"sounds/weapons/hero/bloodseeker/rupture.vsnd"
-    		"soundfile"		"sounds/weapons/hero/bloodseeker/rupture_cast.vsnd"
-    	}
-
-    	"AbilitySpecial"
-   	 	{
-    		"1"
-    		{
-    			"var_type"		"FIELD_INTEGER"
-    			"duration"		"5"
-    		}
-    		"2"
-    		{
-    			"var_type" "FIELD_INTEGER"
-    			"piar" "1"
-    		}
-    		"3"
-    		{
-    			"var_type" "FIELD_INTEGER"
-    			"distancepiz" "1180"
-    		}
-    		"4"
-    		{
-    			"var_type"	"FIELD_INTEGER"
-    			"damage" "200"
-    		}
-    		"5"
-    		{
-    			"var_type"	"FIELD_INTEGER"
-    			"loss_health"	"30"
-    		}
-    		"6"
-    		{
-    			"var_type"	"FIELD_INTEGER"
-    			"duration_loss_hp"	"3"
-    		}
-
-    	}
-    	"OnSpellStart"
-    	{
-    		"Damage"
-    		{
-    			"Target"		"TARGET"
-    			"Type"			"DAMAGE_TYPE_PHYSICAL"
-    			"Damage"		"%damage"
-    		}
-    		"Knockback"
-    		{
-    			"Target"            "TARGET"
-    			"Center" 	        "CASTER"
-    			"Distance"	        "%distancepiz"
-    			"Duration"	        "%piar"
-    			"Height"	        "450"
-    			"IsFixedDistance"	"1"
-    			"ShouldStun"        "0"
-
-    		}
-
-        	"ApplyModifier"
-        	{
-        		"ModifierName"	"modifier_tusk_saitama"
-        		"Target" 		"TARGET"
-        	}
-
-    	}
-    	"Modifiers"
-    	{
-    		"modifier_tusk_saitama"
-    		{
-    			"IsDebuff"			"1"
-    			"Duration" "%piar"
-
-    			"EffectName"	"particles/units/heroes/hero_bloodseeker/bloodseeker_rupture.vpcf"
-    			"EffectAttachType"	"follow_origin"
-    			"Target"	"TARGET"
-    			"OnCreated"
-    			{
-    				"ApplyModifier"
-    				{
-    					"ModifierName"	"modifier_damage_second"
-    					"Target" 		"TARGET"
-    				}
-    				"FireSound"
-        			{
-        				"EffectName"	"Hero_Tusk.WalrusKick.Target"
-        			}
-        			"Rotate"
-					{
-   						"Target"       "TARGET"
-   						"PitchYawRoll"  "15 15 15" //x y z values
-					}
-
-    			}
-    			"Properties"
-    			{
-    				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "-30000000"
-    				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"10000"
-    			}
-    		}
-    	}
-		"Modifiers"
-		{
-			"modifier_damage_second"
-			{
-				"IsDebuff"			"1"
-				"Duration"		"%duration_loss_hp"
-
-				"EffectName"		"particles/units/heroes/hero_bloodseeker/bloodseeker_rupture.vpcf"
-				"EffectAttachType"	"follow_origin"
-
-				"ThinkInterval"  "1.0"
-				"OnIntervalThink"
-				{
-					"Damage"
-					{
-						"Target"		"TARGET"
-						"Type"			"DAMAGE_TYPE_PHYSICAL"
-						"Damage"		"%loss_health"
-					}
-				}
-			}
-		}
-	}
-	"sniper_gun_pidaras"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"ability_name"
-		"MaxLevel" 						"1"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"precache"
 		{
-			"particle"  "particles/heroes/happy_manavoid.vpcf"
-			"soundfile" "soundevents/saitama_sound.vsndevts"
-		}
-		"OnSpellStart"
-		{
-			"ApplyModifier"
-			{
-				"ModifierName"	"modifier_pidaras"
-				"Target" 		"TARGET"
-			}
-			"FireEffect"
-			{
-				"EffectName"        "particles/heroes/happy_manavoid.vpcf"
-				"EffectAttachType"  "follow_origin"
-				"Target"            "TARGET"
-			}
-			"RunScript"
-			{
-				"ScriptFile"	"heroes/hero_tusk/sound.lua"
-				"Function" "playsound"
-			}
-		}
-		"Modifiers"
-		{
-			"modifier_pidaras"
-			{
-				"Passive"			"0"
-				"IsHidden"			"0"
-				"IsDebuff"			"0"
-				"OverrideAnimation"     "ACT_DOTA_STUNNED"
-				"Duration"	"5"
-		//	//	////
-		//	//	////
-				"States"
-				{
-					"MODIFIER_STATE_STUNNED"		"MODIFIER_STATE_VALUE_ENABLED"
-				}
-			}
-		}
-	}
-	"sniper_poop"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"ability_name"
-		"MaxLevel" 						"4"
-		"RequiredLevel"	"1 3 5 8"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"AbilityCastPoint"	"0.3"
-		"AbilityManaCost"	"50"
-		"AbilityCastRange" "430"
+	  		"soundfile"   "soundevents/game_sounds_heroes/game_sounds_bounty_hunter.vsndevts"
+	  	}	
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"damage_radius"			"30 60 100 120"
+				"steal_gold"			"-12 -20 -28 -36"
 			}
 			"02"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"duration"		"4.0 7.0 9.0 11.0"
+				"bonus_damage"		"70 100 130 160"
 			}
 			"03"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"radius_poop"	"430"
+				"get_gold"	"12 20 28 36"
 			}
 			"04"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"minus_move_speed"	"-20 -27 -30 -43"
-			}
-		}
-		"OnSpellStart"
-		{
-			"ActOnTargets"
-			{
-				"Target"
-				{
-					"Center"  	"CASTER"
-					"Radius" 	"%radius_poop"
-					"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-					"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-				}
-				"Action"
-				{
-					"ApplyModifier"
-					{
-						"ModifierName"	"modifier_poop"
-						"Target" 		"TARGET"
-					}
-				}
-			}
-			"FireEffect"
-			{
-				"EffectName"        "particles/heroes/gas_poop.vpcf"
-				"EffectAttachType"  "follow_origin"
-				"Target"            "CASTER"
-				"EffectRadius"	"430"
-				"ControlPoints"
-				{
-					"00"	"0 0 0"
-					"02"	"%radius_poop %radius_poop %radius_poop"
-				}
+				"startcooldown"	"12 9 6 3"
 			}
 		}
 		"Modifiers"
 		{
-			"modifier_poop"
+			"modifier_damage_bonus"
 			{
-				"IsDebuff"	"1"
-				"IsHidden"	"0"
-				"Duration"	"%duration"
-				"ThinkInterval"  "1.0"
-				"OnIntervalThink"
-				{
-					"Damage"
-					{
-						"Target"		"TARGET"
-						"Type"			"DAMAGE_TYPE_MAGICAL"
-						"Damage"		"%damage_radius"
-					}
-				}
-
+				"Passive"			"1"
+				"IsHidden"			"1"
+				
 				"Properties"
 				{
-				    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%minus_move_speed"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+				}
+				"OnAttackLanded"
+				
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_tusk/jinada_datadriven"
+						"Function"		"JinadaStart"
+						"StealGold"		"%steal_gold"
+						"GetGoldSelf"		"%get_gold"
+						"modifier"		"modifier_damage_bonus"
+						"CooldownGet"	"%startcooldown"
+					}
+					"FireSound"
+					{
+						"EffectName"	"Hero_BountyHunter.Jinada"
+						"Target"		"CASTER"
+					}
 				}
 			}
 		}
 	}
-}	
+}

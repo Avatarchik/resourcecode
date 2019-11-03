@@ -55,13 +55,13 @@
 			"modifier_heal"
 			{
 				"Passive"			"0"
-				"IsHidden"			"0"
+				"IsHidden"			"1"
 				"IsDebuff"			"0"
 				"IsBuff"	"1"
 				"Duration"	"%duration"
 				"TextureName"	"superflaskheal"
 
-				"EffectName"            	"particles/items_fx/healing_flask.vpcf"
+				"EffectName"            	"particles/heroes/healing_flask_syka.vpcf"
 				"EffectAttachType"      	"follow_origin"
 
 				"Properties"
@@ -70,10 +70,10 @@
 				}
 				"OnTakeDamage"		
 				{
-					"RemoveModifier"
+					"RunScript"
 					{
-						"ModifierName"	"modifier_activate_clarity"
-						"Target" 		"UNIT"
+						"ScriptFile"	"items/stopheal"
+						"Function"		"ModifierStopHeal"
 					}
 				}
 			}
@@ -151,8 +151,8 @@
 				"Duration"	"%duration"
 				"TextureName"	"shardactivated"
 				
-				"EffectName"            	"particles/items_fx/black_king_bar_avatar.vpcf"
-				"EffectAttachType"      	"follow_origin"
+				"EffectName"            	"particles/heroes/shard_immortality_avatar.vpcf"
+				"EffectAttachType"      	"PATTACH_ABSORIGIN"
 				"Target"	"CASTER"
 				
 				"States"
@@ -204,7 +204,7 @@
 		"ItemQuality"					"consumable"
 
 		"ItemSellable" "1"
-		"ItemKillable" "0"
+		"ItemKillable" "1"
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"Model"							"models/props_gameplay/red_box.vmdl" 
 		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
@@ -237,7 +237,7 @@
 				"Duration"	"8"
 				"TextureName"	"clarityactivated"	
 		
-				"EffectName"            	"particles/items_fx/healing_clarity.vpcf"
+				"EffectName"            	"particles/heroes/healing_clarity_super.vpcf"
 				"EffectAttachType"      	"follow_origin"
 				"Properties"
 				{
@@ -342,6 +342,11 @@
 				"Type"			"DAMAGE_TYPE_MAGICAL"
 				"Damage"		"%damage"
 			}
+			"RunScript"
+			{
+				"ScriptFile"	"items/item_blade_permafrost.lua"
+				"Function"		"Purge"
+			}
 		}
 		"Modifiers"
 		{
@@ -351,6 +356,7 @@
 				"IsDebuff"	"1"
 				"TextureName"	"bladepermafrostactivated"
 				"ThinkInterval"  "1.0"
+				"IsPurgable"		"1"
 				"OnIntervalThink"
 				{
 					"Damage"
@@ -448,26 +454,15 @@
 
 		"OnSpellStart"
 		{
-			"ApplyModifier"
+			"RunScript"
 			{
-				"ModifierName"	"modifier_give_strength"
-				"Target" 		"CASTER"
+				"ScriptFile"	"items/modifyattribute.lua"
+				"Function"		"ChangeAtributeStr"
+				"BonusStrength" "%bonus_strength"
 			}
+
 			"SpendCharge" 
 			{}
-		}
-		"Modifiers"
-		{
-			"modifier_give_strength"
-			{
-				"IsHidden"	"1"
-				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE"
-		
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_strength"
-				}
-			}
 		}
 	}
 	"item_book_state_agillity"
@@ -497,26 +492,14 @@
 		}
 		"OnSpellStart"
 		{
-			"ApplyModifier"
+			"RunScript"
 			{
-				"ModifierName"	"modifier_give_strength"
-				"Target" 		"CASTER"
+				"ScriptFile"	"items/modifyattribute.lua"
+				"Function"		"ChangeAtribute"
+				"BonusAgillity" "%bonus_agillity"
 			}
 			"SpendCharge" 
 			{}
-		}
-		"Modifiers"
-		{
-			"modifier_give_strength"
-			{
-				"IsHidden"	"1"
-				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE"
-		
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_agillity"
-				}
-			}
 		}
 	}
 	"item_book_state_intellect"
@@ -548,177 +531,16 @@
 
 		"OnSpellStart"
 		{
-			"ApplyModifier"
+			"RunScript"
 			{
-				"ModifierName"	"modifier_give_strength"
-				"Target" 		"CASTER"
+				"ScriptFile"	"items/modifyattribute.lua"
+				"Function"		"ChangeAtributeInt"
+				"BonusIntellect" "%bonus_intellect"
 			}
 			"SpendCharge" 
 			{}
 		}
-		"Modifiers"
-		{
-			"modifier_give_strength"
-			{
-				"IsHidden"	"1"
-				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE"
-		
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_intellect"
-				}
-			}
-		}
 	}			
-	"item_blade_permafrost"
-	{
-		"BaseClass"             		"item_datadriven"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AURA"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"ItemShareability" "ITEM_NOT_SHAREABLE"
-
-		"AbilityTextureName"			"bladepermafrost"
-		"Model"							"models/props_gameplay/red_box.vmdl" 
-		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
-		"AbilityCooldown"	"80"
-		"AbilityCastRange"	"880"
-		"AbilityDamage"	""
-
-		"MaxUpgradeLevel"	"2"
-		"ItemBaseLevel"	"1"
-
-		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
-		"ItemQuality"	"epic"
-		"ItemCost"		"3300"
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"projectile_speed"			"900"
-			}
-			"02"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"duration"		"8.0"
-			}
-			"03"
-			{
-				"var_type"	"FIELD_INTEGER"
-				"aura_radius" "550"
-			}
-			"04"
-			{
-				"var_type"	"FIELD_INTEGER"
-				"bonus_damage"	"120 220"
-			}
-			"05"
-			{
-				"var_type"	"FIELD_INTEGER"
-				"bonus_strong"	"25 43"
-			}
-			"06"
-			{
-				"var_type"	"FIELD_INTEGER"
-				"damage"	"200 450"
-			}
-		}
-		"OnSpellStart"
-		{
-			"TrackingProjectile"
-			{
-				"Target"           	"TARGET"
-				"EffectName"		"particles/units/heroes/hero_lich/lich_chain_frost.vpcf"
-				"Dodgeable"			"1"
-				"MoveSpeed"        	"%projectile_speed"
-				"SourceAttachment"	"DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
-			}
-		}
-		"OnProjectileHitUnit"
-		{
-			"DeleteOnHit"	"1"
-			
-			"ApplyModifier"
-			{
-				"ModifierName"	"modifier_frozen"
-				"Target" 		"TARGET"
-			}
-			"FireSound"
-			{
-				"EffectName"		"Hero_Crystal.frostbite"
-			}
-			"Damage"
-			{
-				"Target"		"TARGET"
-				"Type"			"DAMAGE_TYPE_MAGICAL"
-				"Damage"		"%damage"
-			}
-		}
-		"Modifiers"
-		{
-			"modifier_frozen"
-			{
-				"Duration"	"%duration"
-				"IsDebuff"	"1"
-				"TextureName"	"bladepermafrostactivated"
-				"ThinkInterval"  "1.0"
-				"OnIntervalThink"
-				{
-					"Damage"
-					{
-						"Target"		"TARGET"
-						"Type"			"DAMAGE_TYPE_MAGICAL"
-						"Damage"		"50"
-					}
-				}
-				"EffectName"		"particles/units/heroes/hero_crystalmaiden/maiden_frostbite_buff.vpcf"
-				"EffectAttachType"	"follow_origin"
-				"Target"	"TARGET"
-
-				"States"
-				{
-					"MODIFIER_STATE_FROZEN"		"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_ROOTED"		"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_DISARMED"	"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_STUNNED"	"MODIFIER_STATE_VALUE_ENABLED"
-				}
-			}
-			"aura_slow"
-			{
-				"IsHidden"				"1"
-				"Passive"				"1"				
-				"Aura"					"aura_modifier"
-				"Aura_Radius"			"%aura_radius"
-				"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-				"Aura_Types"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_MECHANICAL"	
-			}
-			"aura_modifier"
-			{
-				"IsHidden"	"0"
-				"IsDebuff"	"1"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "-10"
-				    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "-15" 
-				}
-			}
-			"modifier_damage_and_other"
-			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				"IsDebuff"			"0"
-			
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
-				    "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_strong" 
-				}
-			}
-		}
-	}
 	"item_recipe_blade_permafrost_upgraded"
 	{
 		"BaseClass"             		"item_datadriven"
@@ -818,7 +640,7 @@
 			"TrackingProjectile"
 			{
 				"Target"           	"TARGET"
-				"EffectName"		"particles/units/heroes/hero_chaos_knight/chaos_knight_chaos_bolt.vpcf"
+				"EffectName"		"particles/heroes/fire_ice.vpcf"
 				"Dodgeable"			"1"
 				"MoveSpeed"        	"%projectile_speed"
 				"SourceAttachment"	"DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
@@ -833,10 +655,10 @@
 				"ModifierName"	"modifier_frozen"
 				"Target" 		"TARGET"
 			}
-			"RunScript"
+			"ApplyModifier"
 			{
-				"ScriptFile"	"items/item_blade_permafrost_upgraded.lua"
-				"Function"		"play_sound"
+				"ModifierName"	"modifier_purge_effect"
+				"Target" 		"TARGET"
 			}
 			"ActOnTargets"
 			{
@@ -1021,7 +843,7 @@
 	{
 		"BaseClass"             		"item_datadriven"
 		"AbilityTextureName"			"dagon6"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_BASIC"
 		"AbilityCastRange"				"600 650 700 750 800 1000"
@@ -1033,6 +855,8 @@
 		"UpgradeRecipe"	"item_recipe_dagon6"
 		"AbilitySharedCooldown"			"dagon"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		"AbilityCastAnimation"			"ACT_DOTA_IDLE"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -1095,8 +919,7 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
-				
+				"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"			
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_intellect"
@@ -1516,22 +1339,25 @@
 		}
 	}
 	"item_hand_of_midas_2"
-	{	// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"	"item_datadriven"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CREEP"
-		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-		"AbilityTextureName"	"hand_midas_2"
+	{
+		//-----------------------------------------------------------------------------
+		// By DDSuper
+		// Data, 30.10.2019
+		// Script Folder items/hand_of_midas_2.lua
+		//-----------------------------------------------------------------------------
+		"BaseClass"	"item_datadriven" // BaseClass
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK" // Ability Behavior -- Поведение способности
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY" // Target -- Цель из команды = вражеская цель 
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP" // UnitTarget -- Вражеская цель. Какая? = КРИП | ГЕРОЙ
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES" /// Flags -- Флаги = для того чтобы, вы не смогли использовать, этот предмет
+		"AbilityTextureName"	"hand_midas_2" // Иконка предмета разрешение  88x64 для предмета.Для способности, разрешение 128х128
 
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"800"
-		"AbilityCastPoint"				"0.0"
-		"AbilityCooldown"				"120.0"
+		// State
+		"AbilityCastRange"				"800" // Из какого радиуса можна использовать перчатку роскомнадзорв
+		"AbilityCastPoint"				"0.0" // Задержка 
+		"AbilityCooldown"				"120.0" // Дальше лень
 
-		// Item Info
+		// Item Info 
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"0"
 		"ItemCost"						"4350"
@@ -1568,15 +1394,43 @@
 				"var_type"				"FIELD_INTEGER"
 				"transmute_cast_range_tooltip"			"600 800"
 			}
+			"05"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"reduce_gold"	"-300"
+			}
+			"06"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"Xpget"		"60"
+			}
+			"07"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"kill_both_health" "300"	
+
+			}
+			"08"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"max_damage"	"300"
+			}
+			"09"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"min_damage"	"100"
+			}
 		}
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"ScriptFile"	"items/hand_of_midas_2.lua"
+				"ScriptFile"	"items/hand_of_midas_2"
 				"Function"				"item_hand_of_midas_2_spell_start"
 				"BonusGold"				"%bonus_gold"
 				"XPMultiplier"			"%xp_multiplier"
+				"ReduceGold"			"%reduce_gold"
+				"GetXp"					"%Xpget"
 			}
 		}
 		"Modifiers"
@@ -1591,8 +1445,30 @@
 				{
 					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attack_speed"
 				}
+
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"items/hand_of_midas_2"
+						"Function"		"GoldOnAttackAndXp"
+						"Gold"			"15"
+						"Xp"			"10"
+						"GoldRange"		"10"
+						"XpRange"		"5"
+						"HealthDeath"	"100"
+					}
+				}
+				"OnTakeDamage"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"items/hand_of_midas_2"
+						"Function"		"KillBoth"
+					}
+				}
 			}
-		}
+		}			
 	}
 	"item_recipe_hand_of_midas_2"
 	{
@@ -1644,7 +1520,7 @@
 				"Duration"	"12"
 				"StatusEffectName" 			"particles/status_fx/status_effect_ghost.vpcf"
 				"StatusEffectPriority" 		"30"
-				"EffectName"            	"particles/items_fx/ghost.vpcf"
+				"EffectName"            	"particles/heroes/ghost_super.vpcf"
 				"EffectAttachType"      	"PATTACH_ABSORIGIN"
 
 				"Properties"
@@ -1676,6 +1552,8 @@
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE" "-20"
+					"MODIFIER_PROPERTY_INCOMING_PHYSICAL_DAMAGE_PERCENTAGE"	"-20"
+					"MODIFIER_PROPERTY_INCOMING_SPELL_DAMAGE_CONSTANT"	"-20"
 				}
 				"States"
 				{
@@ -1699,4 +1577,261 @@
 			"01"	"item_ghost;item_ghost"
 		}
 	}
+   	"item_demon"
+   	{
+   		"BaseClass"	"item_datadriven"
+   		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+   		"AbilityTextureName"	"bookspawner"
+   		"ItemCost"	"1000"
+   		"ItemPermanent"	"0"
+   		"ItemStackable"	"1"
+   		"ItemInitialCharges"	"1"
+   		"ItemStockTime"	"120"
+   		"AbilityCastRange"	"500"
+   		"AbilityCooldown"	"120"
+   		
+   		"OnSpellStart"
+   		{
+   			"RunScript"
+   			{
+   				"ScriptFile"	"items/item_demon.lua"
+   				"Function"		"ChargeRemove"
+   			}
+   			"SpawnUnit"
+   			{
+   				"UnitName"		"npc_knight_doom"
+   				"Target" 		"POINT"
+   				"UnitCount"		"1"
+   				"UnitLimit"		"2"
+   				"GrantsGold"	"1"
+   				"GrantsXP"		"1"
+   				"SpawnRadius"	"0"
+   			}
+   		}
+   	}
+   	"item_invis_support"
+   	{
+   		"BaseClass"             		"item_datadriven"
+   		"AbilityTextureName"			"ability_name"
+   		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+   		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+   		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+   		"ItemCost"	"1250"
+   		"AbilityCooldown"	"30"
+   		"AbilityManaCost"	"120"
+   		"AbilityCastRange"	"550"
+   		"AbilitySpecial"
+   		{
+   			"01"
+   			{
+   				"var_type"			"FIELD_FLOAT"
+   				"duration"		"8"
+   			}
+   			"02"
+   			{
+   				"var_type"	"FIELD_INTEGER"
+   				"radius"	"550"
+   			}
+   		}
+   		"OnSpellStart"
+   		{
+   			"ActOnTargets"
+   			{
+   				"Target"
+   				{
+   					"Center"  	"CASTER"
+   					"Radius" 	"%radius"
+   					"Teams" 	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+   					"Types" 	"DOTA_UNIT_TARGET_HERO"
+   				}
+   			
+   				"Action"    
+   				{
+   					"ApplyModifier"
+   					{
+   						"ModifierName"	"modifier_activate_invis"
+   						"Target" 		"TARGET"
+   					}
+   				}
+   			}
+   		}
+   		"Modifiers"
+   		{
+   			"modifier_activate_invis"
+   			{
+   				"Passive"			"0"
+   				"IsHidden"			"1"
+   				"IsDebuff"			"0"
+   				"Duration"		"%duration"
+
+   				"States"
+   				{
+   					"MODIFIER_STATE_INVISIBLE"		"MODIFIER_STATE_VALUE_ENABLED"
+   				}
+   				"OnAttackLanded"
+   				{
+   					"RemoveModifier"
+   					{
+   						"ModifierName"	"modifier_invisible"
+   						"Target" 		"TARGET"
+   					}
+   				}
+   				"OnDestroy"
+   				{
+   					"RemoveModifier"
+   					{
+   						"ModifierName"	"modifier_invisible"
+   						"Target" 		"TARGET"
+   					}
+   				}
+   				"OnCreated"
+   				{
+   					"ApplyModifier"
+   					{
+   						"ModifierName"	"modifier_invisible"
+   						"Target" 		"TARGET"
+   						"Duration"		"%duration"
+   					}
+   				}
+   			}
+   		}
+   	}
+   	"item_stop_time"
+   	{
+   		"BaseClass"	"item_datadriven"
+   		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+   		"AbilityTextureName"		"stop_time"
+   		"ItemCost"	"2357"
+   		"AbilitySpecial"
+   		{
+   			"01"
+   			{
+   				"var_type"			"FIELD_INTEGER"
+   				"chance_stop_time"			"15"
+   			}
+   			"02"
+   			{
+   				"var_type"			"FIELD_FLOAT"
+   				"duration"		"4.0"
+   			}
+   			"03"
+   			{
+   				"var_type"	"FIELD_FLOAT"
+   				"heal_health"	"320"
+   			}
+   			"04"
+   			{
+   				"var_type"	"FIELD_INTEGER"
+   				"contr_attack" "120"
+   			}
+   		}
+   		"Modifiers"
+   		{
+   			"modifier_passive_chance_stop"
+   			{
+   				"Passive"			"1"
+   				
+   				"OnAttacked"
+   				{
+   					"Random"
+   					{
+   						"Chance"			"%chance_stop_time"
+   						"OnSuccess"
+   						{
+   							"ApplyModifier"
+   							{
+   								"ModifierName"	"modifier_freeze_time"
+   								"Target"	"ATTACKER"
+   								"Duration"		"%duration"
+   							}
+   							"ApplyModifier"
+   							{
+   								"ModifierName"	"modifier_speed_effect"
+   								"Target" 		"TARGET"
+   								"Duration"		"%duration"
+   							}
+   							"Heal"
+   							{
+   								"Target"        "CASTER"
+   								"HealAmount"	"%heal_health"
+   							}
+   							"Damage"
+   							{
+   								"Target"		"ATTACKER"
+   								"Type"			"DAMAGE_TYPE_PURE"
+   								"Damage"		"%contr_attack"
+   							}
+   						}
+   					}
+   				}
+   			}
+   			"modifier_freeze_time"
+   			{
+   				"Passive"			"0"
+   				"IsHidden"			"1"
+   				"IsDebuff"			"1"
+   			
+   				"States"
+   				{
+   					"MODIFIER_STATE_FROZEN"		"MODIFIER_STATE_VALUE_ENABLED"
+   					"MODIFIER_STATE_STUNNED"	"MODIFIER_STATE_VALUE_ENABLED"
+   				}
+   			}
+   			"modifier_speed_effect"
+   			{
+   				"Passive"			"0"
+   				"IsHidden"			"1"
+   				"IsDebuff"			"0"
+   			
+   				"EffectName"		"particles/units/heroes/hero_faceless_void/faceless_void_chrono_speed.vpcf"
+   				"EffectAttachType"	"follow_origin"
+
+   				"Properties"
+   				{
+   					"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE" "1000"
+   				}
+   			}
+   		}
+   	}
+   	"item_xp_gain"
+   	{
+   		"BaseClass"	"item_datadriven"
+   		"AbilityTextureName"	"item_mask_of_madness"
+   		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+   		"AbilityCooldown"	"2.5"
+
+
+   		"ItemCost"	"560"
+   		
+   		"AbilitySpecial"
+   		{	
+   			"01"
+   			{
+   				"var_type"			"FIELD_FLOAT"
+   				"getcooldown"		"2.5"
+   			}
+   			"02"
+   			{
+   				"var_type"			"FIELD_INTEGER"
+   				"XpGain"	"20"
+   			}	
+   		}
+   		"Modifiers"
+   		{
+   			"modifier_caster_attacked_hero"
+   			{
+   				"Passive"			"1"
+   				"OnAttackLanded"
+   				{
+   					"RunScript"
+   					{
+   						"ScriptFile"	"items/item_xp_gain"
+   						"Function"		"Xp_gain"
+   						"Cooldown"		"%getcooldown"
+   						"XpGain"		"%XpGain"
+   					}
+   				}
+   			}
+   		}
+   	}
 }

@@ -12,8 +12,6 @@
 		"Ability5" "tusk_super_speed"
 		"Ability6" "tusk_damage"
 		"Ability7" "tusk_flying"
-		"Ability10"	"special_bonus_unique_tusk_1"
-
 		
 		"Model"	"models/units/saitama/saitama.vmdl"
 		"MovementSpeed" "350"
