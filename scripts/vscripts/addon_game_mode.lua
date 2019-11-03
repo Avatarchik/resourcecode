@@ -1,4 +1,6 @@
 -- Generated from template
+require('util')
+require('timers')
 
 if CAddonTemplateGameMode == nil then
 	CAddonTemplateGameMode = class({})
@@ -6,9 +8,8 @@ end
 
 function Precache( context )
 	PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_tusk.vsndevts", context )
-    PrecacheResource( "soundfile", "soundevents/saitama_sound.vsndevts", context ) --[[Returns:void
-    Manually precache a single resource
-    ]]
+    PrecacheResource( "soundfile", "soundevents/saitama_sound.vsndevts", context ) 
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_bounty_hunter.vsndevts", context )
 end
 
 -- Create the game mode when we activate
