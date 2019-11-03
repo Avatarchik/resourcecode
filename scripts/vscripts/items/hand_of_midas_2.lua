@@ -1,7 +1,7 @@
 
 --[[--[[--[[--[[--[[--[[--[[--[[//
-Author:DDSuper					//
-Item:Custom Midas				//								
+Author:DDSuper			//
+Item:Hand of Midas 2		//								
 --]]--]]--[[--[[--[[--[[--[[--[[//
 
 function item_hand_of_midas_2_spell_start(keys)
