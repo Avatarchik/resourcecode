@@ -1,0 +1,176 @@
+"DOTAAbilities"
+{
+	"saitama_modifier_lox"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"Warlusloss"
+		"MaxLevel" 						"4"
+		"IsOnCastBar"	"1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityDamageType"				"DAMAGE_TYPE_PURE"
+
+   	 	"AbilityCastPoint"				"0.2"
+    	"AbilityDamage" 				"80 120 150 190"
+    	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+    	"AbilityCooldown"	"8 6 3 1"
+
+    	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+
+    	"precache"
+    	{
+    		"particle" 		"particles/units/heroes/hero_bloodseeker/bloodseeker_rupture.vpcf"
+    		"soundfile"		"sounds/weapons/hero/bloodseeker/rupture.vsnd"
+    		"soundfile"		"sounds/weapons/hero/bloodseeker/rupture_cast.vsnd"
+    	}
+
+    	"AbilitySpecial"
+   	 	{
+    		"1"
+    		{
+    			"var_type"		"FIELD_INTEGER"
+    			"duration"		"2"
+    		}
+    		"2"
+    		{
+    			"var_type" "FIELD_INTEGER"
+    			"piar" "1"
+    		}
+    		"3"
+    		{
+    			"var_type" "FIELD_INTEGER"
+    			"distancepiz" "880 980 1180 1380"
+    		}
+    		"4"
+    		{
+    			"var_type"	"FIELD_INTEGER"
+    			"damage" "80 120 150 190"
+    		}
+    		"5"
+    		{
+    			"var_type"	"FIELD_INTEGER"
+    			"loss_health"	"30 60 80 100"
+    		}
+    		"6"
+    		{
+    			"var_type"	"FIELD_INTEGER"
+    			"duration_loss_hp"	"2 3 4 5"
+    		}
+    		"07"
+    		{
+    			"var_type"	"FIELD_INTEGER"
+    			"cooldown_kick"	"8 6 3 1"
+    		}
+    		"08"
+    		{
+    			"var_type"	"FIELD_INTEGER"
+    			"removecooldown"	"0"
+    		}
+    	}
+    	"Modifiers"
+    	{
+    		"modifier_tusk_saitama"
+    		{
+    			"IsDebuff"			"1"
+    			"Passive"	"0"
+    			"Duration"	"0.5"
+
+    			"EffectName"	"particles/units/heroes/hero_bloodseeker/bloodseeker_rupture.vpcf"
+    			"EffectAttachType"	"follow_origin"
+    			"Target"	"TARGET"
+
+
+    			"States"
+    			{
+    				"MODIFIER_STATE_STUNNED"		"MODIFIER_STATE_VALUE_ENABLED"
+    			}
+    			"Properties"
+    			{
+    				"MODIFIER_PROPERTY_ABSORB_SPELL"	"1"
+    			}
+    		}
+    	}
+		"Modifiers"
+		{
+			"modifier_damage_second"
+			{
+				"IsDebuff"			"1"
+				"Duration"		"%duration_loss_hp"
+
+				"EffectName"		"particles/units/heroes/hero_bloodseeker/bloodseeker_rupture.vpcf"
+				"EffectAttachType"	"follow_origin"
+
+				"ThinkInterval"  "1.0"
+				"OnIntervalThink"
+				{
+					"Damage"
+					{
+						"Target"		"TARGET"
+						"Type"			"DAMAGE_TYPE_PURE"
+						"Damage"		"%loss_health"
+					}
+				}
+			}
+			"modifier_apply_other_modifiers"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"IsDebuff"			"0"
+				
+				"OnAttackLanded"
+				{
+					"Random"
+					{
+						"Chance"			"5"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_tusk_saitama"
+								"Target" 		"TARGET"
+							}
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_damage_second"
+								"Target" 		"TARGET"
+							}
+							"RunScript"
+							{
+								"ScriptFile"	"heroes/hero_tusk/kill_unit"
+								"Function"		"CooldownKick"
+								"WaitPlease"	"%cooldown_kick"
+								"ScepterNoWait"	"%removecooldown"
+							}
+							"Knockback"
+							{
+								"Target"            "TARGET"
+								"Center" 	        "CASTER"
+								"Distance"	        "500"
+								"Duration"	        "0.5"
+								"Height"	        "10"
+								"IsFixedDistance"	"0"
+								"ShouldStun"        "0"	
+							}
+							"Damage"
+							{
+								"Target"		"TARGET"
+								"Type"			"DAMAGE_TYPE_PURE"
+								"Damage"		"%damage"
+							}
+							"FireSound"
+							{
+								"EffectName"	"Hero_TrollWarlord.BattleTrance.Cast"
+								"Target" 		"CASTER"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

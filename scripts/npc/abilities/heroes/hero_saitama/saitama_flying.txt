@@ -1,0 +1,100 @@
+"DOTAAbilities"
+{	
+	"saitama_flying"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"icon"
+		"MaxLevel" 						"2"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilitiUnitTargetType"	"DOTA_UNIT_TARGET_HERO"
+		"AbilityCooldown"	"30"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityCastRange"	"2000 1000000"
+		"AbilityCastPoint"	"0.50 0.25 0.001"
+		"RequiredLevel"	"15"
+
+		"precache"
+		{
+			"particle"  "particles/units/heroes/hero_bloodseeker/bloodseeker_thirst_owner.vpcf"
+			"soundfile" "sounds/weapons/hero/bloodseeker/rupture_cast.vsnd"
+		}
+
+		"OnAbilityPhaseStart"
+		{
+		"ApplyModifier"
+			{
+				"ModifierName"	"modifier_teleport"
+				"Target" 		"CASTER"
+				"Duration"		"2"
+			}
+		}	
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_fly"
+				"Target" 		"CASTER"
+			}
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_tusk/teleportation.lua"
+				"Function"		"Teleport"
+				"Target"	"POINT"
+			}
+			"Knockback"
+			{
+				"Target"            "CASTER"
+				"Center" 	        "POINT"
+				"Duration"	        "2"
+				"Height"	        "20000"
+				"IsFixedDistance"	"1"
+				"ShouldStun"        "1"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_fly"
+			{
+				"Passive"			"1"
+				"IsHidden"			"0"
+
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"		"particles/units/heroes/hero_bloodseeker/bloodseeker_thirst_owner.vpcf"
+						"EffectAttachType"	"follow_origin"
+						"Target"	"CASTER"
+					}
+				}
+				"States"
+				{
+					"MODIFIER_STATE_FLYING_FOR_PATHING_PURPOSES_ONLY"   "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_teleport"
+			{
+
+				"IsHidden"			"0"
+
+				"EffectName"		"particles/units/heroes/hero_furion/furion_teleport.vpcf"
+				"EffectAttachType"	"follow_origin"
+
+				"OnOrder"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_tusk/teleportation.lua"
+						"Function"		"EndTeleport"
+					}
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_teleport"
+						"Target" 		"CASTER"
+					}
+				}	
+			}
+		}
+	}
+}	

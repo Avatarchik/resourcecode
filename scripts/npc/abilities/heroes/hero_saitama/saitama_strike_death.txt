@@ -1,0 +1,71 @@
+"DOTAAbilities"
+{
+    "tusk_strike_death"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"            "onestrike"
+        "MaxLevel"                         "1"
+        "AbilityCooldown" "40"
+        "RequiredLevel"	"35"
+       	"precache"
+		{
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_axe.vsndevts"
+			"particle"			"particles/units/heroes/hero_axe/axe_culling_blade.vpcf"
+		}
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"            "FIELD_INTEGER"
+                "chance_crit_die"            "1"
+            }
+            "02"
+            {
+            	"var_type"	"FIELD_INTEGER"
+            	"crit_strike"	"100000"
+            }
+            "03"
+            {
+            	"var_type"	"FIELD_INTEGER"
+            	"cooldown"	"40"
+            }
+        }
+        "Modifiers"
+        {
+            "modifier_strike_death"
+            {
+                "Passive"            "1"
+                "IsHidden"	"1"
+
+                "OnAttackStart"
+                {
+                    "Random"
+                    {
+                        "Chance"            "%chance_crit_die"
+                        "PseudoRandom" "DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
+                        "OnSuccess"
+                        {
+                           	"RunScript"
+                           	{
+                           		"ScriptFile"	"heroes/hero_tusk/kill_unit"
+                           		"Function"		"kill_chance"
+                           		"CooldownSpell"	"%cooldown"
+                           	}
+                            "FireSound"
+                			{
+                				"EffectName"        "Hero_Axe.Culling_Blade_Success"
+                			}
+                			"AttachEffect"
+                			{
+                				"EffectName"	"particles/units/heroes/hero_axe/axe_culling_blade.vpcf"
+                				"EffectAttachType"  "follow_origin"
+                				"Target"            "TARGET"
+                			}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

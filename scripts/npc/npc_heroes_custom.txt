@@ -5,13 +5,11 @@
 	"npc_dota_hero_tusk"
 	{
 		"override_hero" "npc_dota_hero_tusk"
-		"Ability1" "tusk_strike_death"
-		"Ability2" "tusk_modifier_lox"
-		"Ability3" "tusk_armor"
-		"Ability4" "tusk_debuff_vodka"
-		"Ability5" "tusk_super_speed"
-		"Ability6" "tusk_damage"
-		"Ability7" "tusk_flying"
+		"Ability1" "saitama_strike_death"
+		"Ability2" "saitama_modifier_lox"
+		"Ability3" "saitama_wave"
+		"Ability4" "saitama_super_speed"
+		"Ability5" "tusk_flying"
 		
 		"Model"	"models/units/saitama/saitama.vmdl"
 		"MovementSpeed" "350"

@@ -1,0 +1,70 @@
+"DOTAAbilities"
+{
+	"bounty_hunter_jinada_datadriven"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"bounty_hunter_jinada"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel" 						"4"
+
+		"AbilityCooldown"				"12 9 6 3"
+
+		"precache"
+		{
+	  		"soundfile"   "soundevents/game_sounds_heroes/game_sounds_bounty_hunter.vsndevts"
+		}	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"steal_gold"			"-12 -20 -28 -36"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"bonus_damage"		"70 100 130 160"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"get_gold"	"12 20 28 36"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"startcooldown"	"12 9 6 3"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_damage_bonus"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+				}
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_tusk/jinada_datadriven"
+						"Function"		"JinadaStart"
+						"StealGold"		"%steal_gold"
+						"GetGoldSelf"		"%get_gold"
+						"modifier"		"modifier_damage_bonus"
+						"CooldownGet"	"%startcooldown"
+					}
+					"FireSound"
+					{
+						"EffectName"	"Hero_BountyHunter.Jinada"
+						"Target"		"CASTER"
+					}
+				}
+			}			
+		}
+	}
+}

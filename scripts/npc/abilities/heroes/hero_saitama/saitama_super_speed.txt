@@ -1,0 +1,45 @@
+"DOTAAbilities"
+{
+    "saitama_super_speed"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "running_saitama"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "MaxLevel"                      "4"
+        "AbilityCooldown"   "200"
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"            "FIELD_INTEGER"
+                "duration"            "5"
+            }
+            "02"
+            {
+                "var_type"            "FIELD_FLOAT"
+                "speed"        "1000 3000 4000 5000"
+            }
+        }
+        "OnSpellStart"
+        {
+            "ApplyModifier"
+            {
+                "ModifierName"    "modifier_super_speed"
+                "Target"         "CASTER"
+            }
+        }
+        "Modifiers"
+        {
+            "modifier_super_speed"
+            {
+                "Passive"            "0"
+                "duration"           "%duration"
+        
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE" "%speed"
+                }
+            }
+        }
+    }
+}
